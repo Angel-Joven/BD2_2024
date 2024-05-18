@@ -80,7 +80,7 @@ CREATE TABLE `cita_paciente` (
   KEY `fk_Cita_paciente_Doctores` (`idDoctor`),
   CONSTRAINT `fk_Cita_paciente_Doctores` FOREIGN KEY (`idDoctor`) REFERENCES `doctores` (`idDoctor`),
   CONSTRAINT `fk_Cita_paciente_Pacientes` FOREIGN KEY (`idPaciente`) REFERENCES `pacientes` (`idPaciente`)
-) ENGINE=InnoDB AUTO_INCREMENT=501 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -189,7 +189,7 @@ CREATE TABLE `direccion_doctor` (
   `Usuario_Movimiento` varchar(100) DEFAULT 'Administrador',
   `Fecha_Movimiento` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`idDireccion_doctor`)
-) ENGINE=InnoDB AUTO_INCREMENT=501 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -242,7 +242,7 @@ CREATE TABLE `direccion_paciente` (
   `Usuario_Movimiento` varchar(100) DEFAULT 'Administrador',
   `Fecha_Movimiento` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`idDireccion_paciente`)
-) ENGINE=InnoDB AUTO_INCREMENT=502 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -303,7 +303,7 @@ CREATE TABLE `doctores` (
   PRIMARY KEY (`idDoctor`),
   KEY `fk_Doctores_direccion_doctor` (`idDireccion_doctor`),
   CONSTRAINT `fk_Doctores_direccion_doctor` FOREIGN KEY (`idDireccion_doctor`) REFERENCES `direccion_doctor` (`idDireccion_doctor`)
-) ENGINE=InnoDB AUTO_INCREMENT=501 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -356,7 +356,7 @@ CREATE TABLE `expediente_paciente` (
   PRIMARY KEY (`idExpediente_paciente`),
   KEY `fk_Expediente_paciente_Pacientes` (`idPaciente`),
   CONSTRAINT `fk_Expediente_paciente_Pacientes` FOREIGN KEY (`idPaciente`) REFERENCES `pacientes` (`idPaciente`)
-) ENGINE=InnoDB AUTO_INCREMENT=501 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -552,7 +552,7 @@ CREATE TABLE `pacientes` (
   CONSTRAINT `fk_Pacientes_direccion_paciente` FOREIGN KEY (`idDireccion_paciente`) REFERENCES `direccion_paciente` (`idDireccion_paciente`),
   CONSTRAINT `fk_Pacientes_Expediente_paciente` FOREIGN KEY (`idExpediente_paciente`) REFERENCES `expediente_paciente` (`idExpediente_paciente`),
   CONSTRAINT `fk_Pacientes_Tratamiento_paciente` FOREIGN KEY (`idTratamiento_paciente`) REFERENCES `tratamiento_paciente` (`idTratamiento_paciente`)
-) ENGINE=InnoDB AUTO_INCREMENT=502 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -604,7 +604,7 @@ CREATE TABLE `tratamiento_paciente` (
   PRIMARY KEY (`idTratamiento_paciente`),
   KEY `fk_Tratamiento_paciente_Pacientes` (`idPaciente`),
   CONSTRAINT `fk_Tratamiento_paciente_Pacientes` FOREIGN KEY (`idPaciente`) REFERENCES `pacientes` (`idPaciente`)
-) ENGINE=InnoDB AUTO_INCREMENT=501 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
