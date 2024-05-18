@@ -1,3 +1,12 @@
+-- -----------------------------------------------------------------------------------------------------------------------
+
+-- JOVEN JIMENEZ ANGEL CRISTIAN | BASES DE DATOS 2 - 2861
+-- PROYECTO FINAL - Sistema de Gestión de Pacientes para una Clínica.
+
+-- SCRIPT SQL
+
+-- -----------------------------------------------------------------------------------------------------------------------
+
 -- MySQL Workbench Forward Engineering
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
